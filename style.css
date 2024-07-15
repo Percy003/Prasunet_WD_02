@@ -1,0 +1,97 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh ;
+    background-color: #b6f3d7;
+    margin: 0;
+     flex-direction: column;
+}
+
+ .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.stopwatch{
+    background-color: white;
+    padding: 45px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 20px;
+} 
+
+#display{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: rgb(96, 198, 198);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.buttons button{
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(112, 233, 233);
+    color: white;
+    transition: background-color 0.5s;
+    width: 100px;
+}
+.buttons button:hover{
+    background-color: rgb(49, 109, 109);
+}
+
+#laps{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow: auto;
+}
+
+ #laps li {
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+} 
+
+ #laps li:nth-child(odd) {
+    background: #e0e0e0;
+} 
+
+@media(max-width:576px){
+    .stopwatch{
+        width:250px;
+        height: 250px;
+        padding: 20px;
+    }
+    #display{
+        font-size: 2em;
+    }
+    .buttons button{
+        font-size:0.8em;
+        padding: 8px 16px;
+        width: 80px;  
+    }
+    #laps{
+        width: 90%;
+    }
+ }
